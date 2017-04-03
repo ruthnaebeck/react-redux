@@ -9,7 +9,6 @@ class StationsContainer extends Component {
     };
     
     render() {
-    console.log("props", props)
     return <Stations />
     }
 }
