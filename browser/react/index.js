@@ -38,7 +38,7 @@ const onAppEnter = function () {
       store.dispatch(receiveArtists(artists));
       store.dispatch(receivePlaylists(playlists));
     });
-
+  store.dispatch(loadAllSongs());
 };
 
 const onAlbumEnter = function (nextRouterState) {
@@ -71,7 +71,7 @@ ReactDOM.render(
         <Route path="/new-playlist" component={NewPlaylistContainer} />
         <Route path="/playlists/:playlistId" component={PlaylistContainer} onEnter={onPlaylistEnter} />
         <Route path="/lyrics" component={LyricsContainer} />
-        <Route path="/stations" onEnter={onStationsEnter}>
+        <Route path="/stations" >
           <Route path="/stations/:genreName" component={StationContainer} />
           <IndexRoute component={StationsContainer} />
         </Route>

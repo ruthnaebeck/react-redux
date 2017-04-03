@@ -11,6 +11,7 @@ export default function AddSong (props) {
 
   return (
     <div className="well">
+    {console.log(props)}
       <form className="form-horizontal" noValidate name="songSelect" onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add to Playlist</legend>
