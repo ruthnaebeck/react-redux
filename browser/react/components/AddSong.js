@@ -9,9 +9,10 @@ export default function AddSong (props) {
   const handleChange = props.handleChange;
   const handleSubmit = props.handleSubmit;
 
+  // {console.log('Add Songs props', props)}
+
   return (
     <div className="well">
-    {console.log(props)}
       <form className="form-horizontal" noValidate name="songSelect" onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add to Playlist</legend>

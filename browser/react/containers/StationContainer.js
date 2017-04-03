@@ -20,12 +20,12 @@ const mapStateToProps = (state, ownProps) => ({
   songs: state.songs.filter(song => (song.genre === ownProps.params.genreName))
     .map(convertSong),
   currentSong: state.player.currentSong,
-  isPlaying: state.player.isPlaying, 
+  isPlaying: state.player.isPlaying,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   toggleOne: function(song, list) {
-    dispatch(toggleSong(song, list))
+    dispatch(toggleSong(song, list));
   }
 });
 
