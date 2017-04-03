@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
-import Stations from '../components/Stations'
-import {connect} from 'react-redux'
+import Stations from '../components/Stations';
+import {connect} from 'react-redux';
 
-class StationsContainer extends Component {
-    constructor(props){
-        super(props)
+// class StationsContainer extends Component {
+//     constructor(props){
+//         super(props);
 
-    };
-    
-    render() {
-    return <Stations />
-    }
-}
+//     }
+
+//     render() {
+//     return <Stations />;
+//     }
+// }
 
 const convertSongsToStations = function (songsArray) {
     let stations = {};
     songsArray.forEach(function(song) {
-        let genre = song.genre
+        let genre = song.genre;
         if (stations[genre]) {
             stations[genre].push(song);
         } else {
@@ -26,9 +26,9 @@ const convertSongsToStations = function (songsArray) {
     return stations;
 };
 
-const mapStateToProps = (state) => ({stations: convertSongsToStations(state.songs)})
+const mapStateToProps = (state) => ({stations: convertSongsToStations(state.songs)});
 
-const mapDispatchToProps = (dispatch) => ({})
+const mapDispatchToProps = (dispatch) => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Stations)
+export default connect(mapStateToProps, mapDispatchToProps)(Stations);
 // export default StationsContainer
